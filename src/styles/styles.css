@@ -166,6 +166,60 @@ p {
           animation-delay: -40s;
 }
 
+.form_create {
+  margin-top: 64px;
+  margin-bottom: 64px;
+}
+
+.form_create_header {
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.form_create_header h2 {
+  margin-bottom: 8px;
+}
+
+.form_create_labels {
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3rem;
+}
+.form_create_labels label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+.form_create_labels label input {
+  margin-top: 0.25rem;
+  border: 1px solid #A1A1A1;
+  outline: none;
+  border-radius: 4px;
+  padding: 8px;
+  color: #fff;
+  background-color: transparent;
+  height: 48px;
+}
+.form_create_labels label span {
+  margin-top: 8px;
+  color: #f12828;
+}
+
+.button_form_create {
+  display: flex;
+  justify-content: center;
+}
+
+.form_create_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @-webkit-keyframes animateText {
   0% {
     transform: translateX(100%);

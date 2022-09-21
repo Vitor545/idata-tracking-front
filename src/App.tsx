@@ -1,6 +1,7 @@
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import TextInfinite from "./components/TextInfinite";
+import Form from "./components/Form";
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <Header />
       <Hero />
       <TextInfinite />
+      <Form />
     </div>
   );
 }
