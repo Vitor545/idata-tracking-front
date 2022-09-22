@@ -1,7 +1,9 @@
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import TextInfinite from "./components/TextInfinite";
-import Form from "./components/Form";
+import Home from "./pages/Home";
+import TrackingCards from "./pages/TrackingCards";
+import TrackingTable from "./pages/TrackingTable";
 
 function App() {
   return (
@@ -9,7 +11,7 @@ function App() {
       <Header />
       <Hero />
       <TextInfinite />
-      <Form />
+      <TrackingTable />
     </div>
   );
 }

@@ -10,7 +10,7 @@ const schemaInputPrefix = Joi.object({
   inputPrefix: Joi.string().min(3).required(),
 });
 
-export default function FormCreate() {
+export default function Form() {
   const [inputNumber, setInputNumber] = useState("");
   const [inputPrefix, setInputPrefix] = useState("");
   const [inputNumberMensage, setInputNumberMensage] = useState("false");
