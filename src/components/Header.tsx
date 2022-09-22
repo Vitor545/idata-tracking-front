@@ -1,4 +1,9 @@
+import { Link, useLocation } from "react-router-dom";
+
 export default function Header() {
+  const { pathname } = useLocation();
+  const headerLink: any = { "/tracking": "/", "/": "/tracking" };
+  const headerName: any = { "/tracking": "Início", "/": "Ver Rastreios" };
   return (
     <header className="header">
       <div className="container header__container">
@@ -20,7 +25,10 @@ export default function Header() {
             />
           </svg>
         </div>
-        <div className="header_button">Ver Rastreios</div>
+
+        <div className="header_button">
+          <Link to={headerLink[pathname]}>{headerName[pathname]}</Link>
+        </div>
       </div>
     </header>
   );

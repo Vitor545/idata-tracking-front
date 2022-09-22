@@ -103,7 +103,10 @@ p {
   cursor: pointer;
   padding: 16px;
 }
-.header_button::after {
+.header_button a {
+  color: #fff;
+}
+.header_button a::after {
   content: "";
   display: block;
   width: 0;
@@ -111,7 +114,7 @@ p {
   background: #F68832;
   transition: 0.5s ease;
 }
-.header_button:hover::after {
+.header_button a:hover::after {
   width: 100%;
 }
 

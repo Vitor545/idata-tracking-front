@@ -7,7 +7,7 @@ export default function Hero() {
         <Typewriter
           onInit={(typewriter) => {
             typewriter
-              .pauseFor(1000)
+              .pauseFor(500)
               .typeString('<h1><span>e</span>-Tracking</h1>')
               .pauseFor(15000)
               .deleteChars(20)

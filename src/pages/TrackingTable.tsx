@@ -1,4 +1,3 @@
-
 import TableCard from "../components/TableCard";
 
 function TrackingCards() {
