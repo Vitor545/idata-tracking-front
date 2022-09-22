@@ -109,9 +109,7 @@ p {
 .header_button {
   cursor: pointer;
   padding: 16px;
-  a {
-    color: $white;
-
+  
   &::after {
     content: '';
     display: block;
@@ -123,7 +121,6 @@ p {
 
   &:hover::after {
     width: 100%;
-  }
   }
 }
 
@@ -377,6 +374,8 @@ p {
       line-height: 90%;
       margin-top: 8px;
       font-weight: 400;
+      max-width: 130px;
+      text-overflow: ellipsis;
     }
   }
 

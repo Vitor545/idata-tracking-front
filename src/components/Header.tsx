@@ -4,6 +4,7 @@ export default function Header() {
   const { pathname } = useLocation();
   const headerLink: any = { "/tracking": "/", "/": "/tracking" };
   const headerName: any = { "/tracking": "Início", "/": "Ver Rastreios" };
+  console.log(headerName[pathname]);
   return (
     <header className="header">
       <div className="container header__container">
@@ -25,10 +26,14 @@ export default function Header() {
             />
           </svg>
         </div>
-
-        <div className="header_button">
-          <Link to={headerLink[pathname]}>{headerName[pathname]}</Link>
-        </div>
+        <Link
+          to={headerLink[pathname] ? headerLink[pathname] : "/"}
+          style={{ color: "white" }}
+        >
+          <div className="header_button">
+            {headerName[pathname] ? headerName[pathname] : "Início"}
+          </div>
+        </Link>
       </div>
     </header>
   );

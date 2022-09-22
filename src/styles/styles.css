@@ -103,10 +103,7 @@ p {
   cursor: pointer;
   padding: 16px;
 }
-.header_button a {
-  color: #fff;
-}
-.header_button a::after {
+.header_button::after {
   content: "";
   display: block;
   width: 0;
@@ -114,7 +111,7 @@ p {
   background: #F68832;
   transition: 0.5s ease;
 }
-.header_button a:hover::after {
+.header_button:hover::after {
   width: 100%;
 }
 
@@ -338,6 +335,8 @@ p {
   line-height: 90%;
   margin-top: 8px;
   font-weight: 400;
+  max-width: 130px;
+  text-overflow: ellipsis;
 }
 .table_header_date div:first-child {
   margin-right: 38px;

@@ -1,18 +1,25 @@
-export default function Card() {
+import { Link } from "react-router-dom";
+
+export type PropsCard = {
+  awb: string;
+  type_company: string;
+};
+
+export default function Card({ awb, type_company }: PropsCard) {
   return (
     <div className="card_awb">
       <div className="card_awb_header">
         <span>Código AWB</span>
-        <span>LATAM</span>
+        <span>{type_company}</span>
       </div>
       <div className="card_awb_number">
         <div>
           <span>Prefixo</span>
-          <h4>549</h4>
+          <h4>{awb.substr(0, 3)}</h4>
         </div>
         <div>
           <span>Número</span>
-          <h4>25045802</h4>
+          <h4>{awb.substr(3, 8)}</h4>
         </div>
       </div>
       <div className="card_awb_button">
@@ -34,7 +41,9 @@ export default function Card() {
             <polyline points="7 7 17 7 17 17" />
           </svg>
         </div>
-        <button className="btn">Ver Rastreios</button>
+        <Link to={`/tracking/${awb}`} style={{ color: "white" }}>
+          <button className="btn">Ver Rastreios</button>
+        </Link>
       </div>
     </div>
   );
