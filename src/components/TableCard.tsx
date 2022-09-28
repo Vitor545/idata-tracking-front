@@ -58,15 +58,15 @@ export default function TableCard({
     return dataConsultaFormatada;
   };
 
-  console.log(consultation_date);
-
   return (
-    <div className="table_container">
+    <div className="table_container" data-testid="table_card">
       <div className="table_card_header">
         <div className="table_card_awb">
           <div className="table_card_awb_header">
             <span>Código AWB</span>
-            {numerosDeRatreio - 1 === index && <span className="spanLast">Último Rastreio</span>}
+            {numerosDeRatreio - 1 === index && (
+              <span className="spanLast">Último Rastreio</span>
+            )}
           </div>
           <div className="card_awb_number table_card_awb_number">
             <div>
@@ -81,11 +81,11 @@ export default function TableCard({
         </div>
         <div className="table_card_awb2">
           <div className="table_header_date">
-            <div>
+            <div data-testid="table_card_last_status">
               <span>Último Status</span>
               <h4>{last_update}</h4>
             </div>
-            <div>
+            <div data-testid="table_card_date_consult">
               <span>Data da Consulta</span>
               <h4>{consultation_date}</h4>
             </div>
@@ -102,19 +102,37 @@ export default function TableCard({
         <div className="table_card_block1">
           <div>
             <div>ORIGEM</div>
-            <div className="table_card_block_secundary">{origin}</div>
+            <div
+              data-testid="table_card_origin"
+              className="table_card_block_secundary"
+            >
+              {origin}
+            </div>
           </div>
           <div>
             <div>DESTINO</div>
-            <div className="table_card_block_secundary">{destination}</div>
+            <div
+              data-testid="table_card_destination"
+              className="table_card_block_secundary"
+            >
+              {destination}
+            </div>
           </div>
           <div>
             <div>FLIGHT NO</div>
-            <div className="table_card_block_secundary">{flight_no}</div>
+            <div
+              data-testid="table_card_flight"
+              className="table_card_block_secundary"
+            >
+              {flight_no}
+            </div>
           </div>
           <div>
             <div>ETD</div>
-            <div className="table_card_block_secundary">
+            <div
+              className="table_card_block_secundary"
+              data-testid="table_card_etd"
+            >
               {formatDate(etd, true).substring(0, 8)} <br></br>
               {formatDate(etd, true).substring(9, 14)}
             </div>
@@ -123,20 +141,29 @@ export default function TableCard({
         <div className="table_card_block2">
           <div>
             <div>ETA</div>
-            <div className="table_card_block_secundary">
+            <div
+              className="table_card_block_secundary"
+              data-testid="table_card_eta"
+            >
               {formatDate(eta, true).substring(0, 8)} <br></br>
               {formatDate(eta, true).substring(9, 14)}
             </div>
           </div>
           <div>
             <div>PEÇAS</div>
-            <div className="table_card_block_secundary">{actual_p}</div>
+            <div
+              className="table_card_block_secundary"
+              data-testid="table_card_pieces"
+            >
+              {actual_p}
+            </div>
           </div>
           <div>
             <div className="table_card_block_peso">PESO</div>
             <div
               className="table_card_block_secundary"
               style={{ borderRight: 0 }}
+              data-testid="table_card_weight"
             >
               {actual_k}
             </div>

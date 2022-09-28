@@ -30,7 +30,7 @@ export default function Header() {
           to={headerLink[pathname] ? headerLink[pathname] : "/"}
           style={{ color: "white" }}
         >
-          <div className="header_button">
+          <div className="header_button" data-testid='button_header'>
             {headerName[pathname] ? headerName[pathname] : "Início"}
           </div>
         </Link>

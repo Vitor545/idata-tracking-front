@@ -28,6 +28,8 @@ export default function Form() {
     return <Loading />;
   }
 
+  console.log(inputNumber)
+
   const isMensage: any = { true: "block", false: "none" };
   const classInput: any = {
     error: "error_input",
@@ -148,6 +150,7 @@ export default function Form() {
                   id="input_prefix"
                   onChange={onChange}
                   maxLength={3}
+                  data-testid="input_prefix"
                   onKeyPress={(e: any) => onlynumber(e)}
                   className={classInput[inputPrefixClass]}
                 />
@@ -161,6 +164,7 @@ export default function Form() {
                   type="text"
                   id="input_number"
                   onChange={onChange}
+                  data-testid="input_number"
                   maxLength={8}
                   onKeyPress={(e: any) => onlynumber(e)}
                   className={classInput[inputNumberClass]}
@@ -171,7 +175,7 @@ export default function Form() {
               </label>
             </div>
             <div className="button_form_create">
-              <button onClick={onClick} className="btn">
+              <button onClick={onClick} className="btn" data-testid="button_form_create">
                 Rastrear
               </button>
             </div>

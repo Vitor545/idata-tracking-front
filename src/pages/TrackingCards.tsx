@@ -28,7 +28,7 @@ function TrackingCards() {
   return (
     <div className="container card_container_page">
       {trackings.map(({ awb, type_company }: any) => (
-        <Card awb={awb} type_company={type_company} />
+        <Card awb={awb} type_company={type_company} key={awb}/>
       ))}
     </div>
   );

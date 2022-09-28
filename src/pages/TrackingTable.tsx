@@ -53,6 +53,7 @@ function TrackingCards() {
             eta={eta}
             index={index}
             numerosDeRatreio={numerosDeRatreio}
+            key={index}
           />
         )
       )}

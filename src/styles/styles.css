@@ -279,7 +279,7 @@ p {
   padding: 16px;
   color: #F68832;
 }
-.card_awb_button_arrow a {
+.card_awb_button_arrow button {
   border-bottom: 1px solid #F68832;
   font-size: 14px;
   font-weight: 700;

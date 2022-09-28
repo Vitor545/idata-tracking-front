@@ -7,17 +7,17 @@ export type PropsCard = {
 
 export default function Card({ awb, type_company }: PropsCard) {
   return (
-    <div className="card_awb">
+    <div className="card_awb" data-testid={`card_tracking`}>
       <div className="card_awb_header">
         <span>Código AWB</span>
         <span>{type_company}</span>
       </div>
       <div className="card_awb_number">
-        <div>
+        <div data-testid='card_prefix'>
           <span>Prefixo</span>
           <h4>{awb.substr(0, 3)}</h4>
         </div>
-        <div>
+        <div data-testid='card_number'>
           <span>Número</span>
           <h4>{awb.substr(3, 8)}</h4>
         </div>
@@ -25,7 +25,7 @@ export default function Card({ awb, type_company }: PropsCard) {
       <div className="card_awb_button">
         <div className="card_awb_button_arrow">
           <Link to='/'>
-            <a>Nova Consulta</a>
+            <button>Nova Consulta</button>
           </Link>
           <svg
             xmlns="http://www.w3.org/2000/svg"
