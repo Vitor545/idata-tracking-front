@@ -10,6 +10,8 @@ export type PropsTable = {
   flight_no: string;
   etd: string;
   eta: string;
+  index: number;
+  numerosDeRatreio: number;
 };
 
 export default function TableCard({
@@ -24,7 +26,19 @@ export default function TableCard({
   flight_no,
   etd,
   eta,
+  index,
+  numerosDeRatreio,
 }: PropsTable) {
+  const links: any = {
+    LATAM: `https://www.latamcargo.com/en/trackshipment?docNumber=${awb.substr(
+      3,
+      8
+    )}&docPrefix=${awb.substr(0, 3)}`,
+    UNITED: `https://www.unitedcargo.com/en/us/track/awb/016-${awb.substr(
+      3,
+      8
+    )}`,
+  };
   const formatDate = (data: string, dateHors: boolean = false) => {
     let dataConsulta = new Date(data);
     let dataConsultaFormatada =
@@ -44,12 +58,15 @@ export default function TableCard({
     return dataConsultaFormatada;
   };
 
+  console.log(consultation_date);
+
   return (
     <div className="table_container">
       <div className="table_card_header">
         <div className="table_card_awb">
           <div className="table_card_awb_header">
             <span>Código AWB</span>
+            {numerosDeRatreio - 1 === index && <span className="spanLast">Último Rastreio</span>}
           </div>
           <div className="card_awb_number table_card_awb_number">
             <div>
@@ -70,11 +87,11 @@ export default function TableCard({
             </div>
             <div>
               <span>Data da Consulta</span>
-              <h4>{formatDate(consultation_date)}</h4>
+              <h4>{consultation_date}</h4>
             </div>
           </div>
           <div className="table_header_button">
-            <div>
+            <div onClick={() => window.open(links[type_company], "_blank")}>
               <span>Veja no Site da Compania</span>
               <h4>{type_company}</h4>
             </div>

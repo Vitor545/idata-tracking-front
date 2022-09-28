@@ -1,6 +1,9 @@
 import { useState } from "react";
 import Joi from "joi";
 import { toast } from "react-toastify";
+import { createTracking } from "../libs/api";
+import Loading from "./Loading";
+import { useNavigate } from "react-router-dom";
 
 const schemaInputNumber = Joi.object({
   inputNumber: Joi.string().min(8).required(),
@@ -17,6 +20,13 @@ export default function Form() {
   const [inputPrefixMensage, setInputPrefixMensage] = useState("false");
   const [inputNumberClass, setInputNumberClass] = useState("normal");
   const [inputPrefixClass, setInputPrefixClass] = useState("normal");
+  const [isLoading, setIsLoading] = useState(false);
+
+  const navigate = useNavigate();
+
+  if (isLoading) {
+    return <Loading />;
+  }
 
   const isMensage: any = { true: "block", false: "none" };
   const classInput: any = {
@@ -74,14 +84,41 @@ export default function Form() {
     }
   };
 
-  const onClick = () => {
+  const onClick = async () => {
     validaStyleInputNumber(inputNumber);
     validaStyleInputPrefix(inputPrefix);
     if (validationErrorInputNumber || validationErrorInputPrefix) {
-      console.log(validationErrorInputPrefix);
+      toast.error("Algum campo está errado, ou companhia ainda não aceita :(", {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        theme: "dark",
+        draggable: true,
+        progress: undefined,
+      });
       return;
     }
-    console.log("sucess");
+    setIsLoading(true);
+    const result = await createTracking(inputPrefix, inputNumber);
+    setIsLoading(false);
+    if (!result) {
+      toast.error("Algum campo está errado, ou companhia ainda não aceita :(", {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        theme: "dark",
+        draggable: true,
+        progress: undefined,
+      });
+      setInputNumberClass("normal");
+      setInputPrefixClass("normal");
+      return;
+    }
+    navigate(`/tracking/${result.awb}`);
   };
 
   return (
@@ -98,7 +135,9 @@ export default function Form() {
               <p>
                 Basta informar seu código nos campos abaixo e clicar em enviar
                 <br />
-                Atualmente aceitamos apenas LATAM e UNITED
+                Atualmente aceitamos apenas{" "}
+                <span style={{ color: "#F68832" }}>LATAM</span> e{" "}
+                <span style={{ color: "#F68832" }}>UNITED</span>
               </p>
             </div>
             <div className="form_create_labels">

@@ -24,7 +24,9 @@ export default function Card({ awb, type_company }: PropsCard) {
       </div>
       <div className="card_awb_button">
         <div className="card_awb_button_arrow">
-          <a>Nova Consulta</a>
+          <Link to='/'>
+            <a>Nova Consulta</a>
+          </Link>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"

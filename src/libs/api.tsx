@@ -11,11 +11,9 @@ async function getAllTracking() {
     return data;
   } catch (error) {
     if (axios.isAxiosError(error)) {
-      console.log("error message: ", error.message);
-      return error.message;
+      return null;
     } else {
-      console.log("unexpected error: ", error);
-      return "An unexpected error occurred";
+      return null;
     }
   }
 }
@@ -31,11 +29,9 @@ async function getTrackingById(id: string) {
     return data;
   } catch (error) {
     if (axios.isAxiosError(error)) {
-      console.log("error message: ", error.message);
-      return error.message;
+      return null;
     } else {
-      console.log("unexpected error: ", error);
-      return "An unexpected error occurred";
+      return null;
     }
   }
 }
@@ -55,11 +51,9 @@ async function createTracking(prefix: string, number: string) {
     return data;
   } catch (error) {
     if (axios.isAxiosError(error)) {
-      console.log("error message: ", error.message);
-      return error.message;
+      return null;
     } else {
-      console.log("unexpected error: ", error);
-      return "An unexpected error occurred";
+      return null;
     }
   }
 }

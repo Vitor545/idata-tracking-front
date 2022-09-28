@@ -4,7 +4,7 @@ export default function Header() {
   const { pathname } = useLocation();
   const headerLink: any = { "/tracking": "/", "/": "/tracking" };
   const headerName: any = { "/tracking": "Início", "/": "Ver Rastreios" };
-  console.log(headerName[pathname]);
+  
   return (
     <header className="header">
       <div className="container header__container">

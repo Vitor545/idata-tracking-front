@@ -109,7 +109,7 @@ p {
 .header_button {
   cursor: pointer;
   padding: 16px;
-  
+
   &::after {
     content: '';
     display: block;
@@ -258,12 +258,6 @@ p {
   align-items: center;
   justify-content: space-between;
 
-  span:first-child {
-    font-weight: 700;
-    line-height: 90%;
-    font-size: 14px;
-  }
-
   span:last-child {
     font-weight: 700;
     line-height: 90%;
@@ -271,6 +265,12 @@ p {
     border-radius: 4px;
     border: 1px solid $primary-color;
     padding: 6px 18px;
+  }
+
+  span:first-child {
+    font-weight: 700;
+    line-height: 90%;
+    font-size: 14px;
   }
 }
 
@@ -332,12 +332,22 @@ p {
 
 .table_card_awb_header {
   display: flex;
+  justify-content:space-between;
   align-items: center;
 
   span:first-child {
     font-weight: 700;
     line-height: 90%;
     font-size: 12px;
+  }
+
+  .spanLast {
+    font-weight: 700;
+    line-height: 90%;
+    font-size: 14px;
+    border-radius: 4px;
+    border: 1px solid $primary-color;
+    padding: 6px 18px;
   }
 }
 
@@ -499,9 +509,56 @@ p {
 .table_container_page {
   margin-top: 24px;
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   align-items: center;
   gap: 32px;
+
+}
+
+.loader_container {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background: $backgroud-color;
+  align-items: center;
+}
+
+.loader_container_ball {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  background: linear-gradient(0deg, $primary_color-loading, $primary-color 100%);
+  animation: animationLoad 1s linear infinite;
+
+  &:after {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: $backgroud-color;
+  }
+}
+
+@keyframes animationLoad {
+  0% {
+    transform: rotate(0deg)
+  }
+
+  100% {
+    transform: rotate(360deg)
+  }
 }
 
 @keyframes animateText {
@@ -552,6 +609,7 @@ p {
     span:first-child {
       font-size: 12px;
     }
+
   }
 
   .card_awb_number.table_card_awb_number {
