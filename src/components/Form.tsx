@@ -28,8 +28,6 @@ export default function Form() {
     return <Loading />;
   }
 
-  console.log(inputNumber)
-
   const isMensage: any = { true: "block", false: "none" };
   const classInput: any = {
     error: "error_input",
@@ -175,7 +173,11 @@ export default function Form() {
               </label>
             </div>
             <div className="button_form_create">
-              <button onClick={onClick} className="btn" data-testid="button_form_create">
+              <button
+                onClick={onClick}
+                className="btn"
+                data-testid="button_form_create"
+              >
                 Rastrear
               </button>
             </div>
