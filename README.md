@@ -1,46 +1,83 @@
-# Getting Started with Create React App
+## Projeto Tracking
+ 
+<h3 align='center'> 📦 Faça seu rastreio </h3>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 📄 Contexto
 
-## Available Scripts
+**Olá usuário, está procurando sua encomenda?** Nesse projeto eu criei uma aplicação `de busca de encomendas, testada e responsiva`. Tudo isso com o uso de tecnologias como `Node, Express, React, Typescript, Eslint, SASS , Jest e muito mais`. Foi um projeto desafiador, pois houve `uso de várias técnicas de crawler, além de ser um aplicação com bastante animações e ser testada`. Além disso, foi usado `Hooks e Padrões de commits
+Foi uma aplicação muito legal de se fazer e espero que goste, o link para o Front End`.
+[Back-End](https://github.com/Vitor545/idata-tracking-back)
+<br />
 
-In the project directory, you can run:
 
-### `npm start`
+<div>
+<img width=100% src="videoPage.gif"></img>
+</div>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<br/>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## 👨‍💻 Tecnologia utilizadas
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<p align='center'>
+  <img src='https://img.shields.io/badge/Typescript-blue?style=for-the-badge' />
+  <img src='https://img.shields.io/badge/JavaScript-yellow?style=for-the-badge' />
+  <img src='https://img.shields.io/badge/Bibliotecas-brown?style=for-the-badge' />
+  <img src='https://img.shields.io/badge/Git-black?style=for-the-badge' />
+  <img src='https://img.shields.io/badge/RTL-black?style=for-the-badge' />
+  <img src='https://img.shields.io/badge/GitHub-purple?style=for-the-badge' />
+  <img src='https://img.shields.io/badge/eslint-purple?style=for-the-badge' />
+  <img src='https://img.shields.io/badge/mysql-black?style=for-the-badge' />
+  <img src='https://img.shields.io/badge/REACT-black?style=for-the-badge' />
+  <img src='https://img.shields.io/badge/chai-blue?style=for-the-badge' />
+  <img src='https://img.shields.io/badge/express-purple?style=for-the-badge' />
+  <img src='https://img.shields.io/badge/SASS-purple?style=for-the-badge' />
+  <img src='https://img.shields.io/badge/node-yellow?style=for-the-badge' />
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+</p>
 
-### `npm run eject`
+<br/>
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+<h3 align='center'> 💿 Rodando na sua máquina</h3>
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+## ⬇️ Instalações necessárias
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Para executar com sucesso o projeto é necessário instalar o GIT:
+[GIT](https://git-scm.com/downloads)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Para executar com sucesso o projeto é necessário instalar o Node.js:
+[Node.js](https://nodejs.org/en/download/)
+
+<br/>
+
+
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
+
+## ▶️ Executar a aplicação
+
+**Para executar a aplicação em sua máquina local basta escolher uma pasta no seu computador e seguir os seguintes comandos no terminal do seu computador.**
+
+📋 Copie as linhas de código e cole no terminal.
+
+```bash
+git clone git@github.com:Vitor545/idata-tracking-front.git
+cd idata-tracking-front
+npm i
+npm start 
+```
+
+<br/>
+
+
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
+
